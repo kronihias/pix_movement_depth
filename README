@@ -1,0 +1,30 @@
+pix_movement_depth
+======================================
+
+Pure Data / Gem external to extract movement in a Kinect depthmap (similar to pix_movement).
+
+
+(C) 2013 by Matthias Kronlachner
+__________________________________________________________
+
+pix_openni and pix_freenect can (if set to raw mm mode) output the depth information in millimeter in the red and green color channel.
+
+this external allows you to filter movement in a depthmap.
+
+all computation is done on cpu!
+consider using gpu shaders if you don't need the data on cpu side!
+
+_______________
+:::CHANGELOG:::
+
+
+ ________________
+:::KNOWN BUGS:::
+
+
+ ________________
+:::THINGS TO DO:::
+
+
+
+questions: m.kronlachner@gmail.com
