@@ -1,7 +1,6 @@
 #N canvas 633 22 611 309 10;
 #X obj 376 135 gemwin;
 #X msg 331 89 destroy;
-#X msg 376 65 dimen 640 240 \, create \, 1;
 #X msg 417 105 color 1 0 0;
 #X msg 438 131 dimen 1280 480 \, create \, 1;
 #X obj 64 117 gemhead;
@@ -12,22 +11,26 @@
 #X obj 64 139 pix_freenect 0 1 1;
 #X obj 169 117 gemhead;
 #X obj 169 187 alpha;
-#X obj 169 223 pix_movement_depth 10;
 #X floatatom 292 201 5 0 0 0 - - -;
 #X text 331 200 threshold in mm;
 #X obj 180 167 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 10 7 detect movement between two subsequent depth map frames
 and store into alphachannel.;
+#X msg 376 65 dimen 640 480 \, create \, 1;
+#X obj 169 223 pix_movement_depth 100;
+#X obj 222 191 tgl 15 0 empty empty active 17 7 0 10 -262144 -1 -1
+1 1;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 3 0 0 0;
-#X connect 4 0 0 0;
-#X connect 5 0 9 0;
-#X connect 6 0 7 0;
-#X connect 9 1 11 0;
-#X connect 10 0 9 1;
-#X connect 11 0 12 0;
-#X connect 12 0 6 0;
-#X connect 13 0 12 1;
-#X connect 15 0 11 0;
+#X connect 4 0 8 0;
+#X connect 5 0 6 0;
+#X connect 8 1 10 0;
+#X connect 9 0 8 1;
+#X connect 10 0 16 0;
+#X connect 11 0 16 1;
+#X connect 13 0 10 0;
+#X connect 15 0 0 0;
+#X connect 16 0 5 0;
+#X connect 17 0 16 0;

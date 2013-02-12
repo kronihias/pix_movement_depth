@@ -64,8 +64,11 @@ class GEM_EXTERN pix_movement_depth : public GemPixObj
 
     	//////////
     	// Set the new threshold value
-        static void threshMessCallback(void *data, float value);
-
+      static void threshMessCallback(void *data, t_floatarg value);
+  
+      static void activeMessCallback(void *data, t_floatarg value);
+  
+    bool m_active; // switch on/off processing
 		int m_threshold;
 		std::vector<int> buffer;
 };
